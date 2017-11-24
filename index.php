@@ -25,8 +25,9 @@ switch ($parts[3]) {
 			$page = 0;
 	
 		include_once('db_config.php');
-		include_once('./modele/films.php');
-		getmovie($pdo);
+		include_once('./modele/movies.php');
+		getMoviesPage($pdo, $page);
+		getGenres($pdo, 7);
 		break;
 
 	default:

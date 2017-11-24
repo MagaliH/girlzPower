@@ -4,6 +4,7 @@ $servername = "localhost";
 $username = "root";
 $password = "online";
 $database = "cancoicodemovies";
+$utf = "utf-8";
 
 try {
     $pdo = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
