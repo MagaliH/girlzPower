@@ -33,10 +33,10 @@ function getmovie($pdo) {
   // On calcule le numéro du premier message qu'on prend pour le LIMIT de MySQL
   $premier_films_afficher = ($page - 1) * $nb_films_page;
 
-  $reponse = $pdo->query('SELECT * FROM films ORDER BY titre ASC LIMIT ' . $premier_films_afficher . ', ' . $nb_films_page);
-
-  while ($donnees = $reponse->fetch()){
-      echo '<p><strong>' . stripslashes($donnees['titre']) . '</strong>'.'</p>';
+  $reponses = $pdo->query('SELECT * FROM films ORDER BY titre ASC LIMIT ' . $premier_films_afficher . ', ' . $nb_films_page);
+  while ($donnees = $reponses->fetch()){
+      echo '<p><strong>' . $donnees['titre'] . '</strong>'.'</p>';
+      echo "<form action='/girlzPower/index.php/films/".$donnees[0]."' method='post'><button class='btn-plus'>".'En savoir plus'."</button></form>";
   }
 
   // catch(Exception $e){

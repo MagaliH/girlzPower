@@ -1,11 +1,8 @@
 <?php
 $uri = $_SERVER['REQUEST_URI'];
-
-
-
 $parts = explode('/', rtrim($uri, '/'));
 // $id_str = array_pop($parts);
-
+include_once('db_config.php');
 
 
 
@@ -22,9 +19,6 @@ switch ($parts[3]) {
   }else{
     $page = 0;
   }
-
-
-  include_once('db_config.php');
   include_once('./modele/films.php');
 
   getmovie($pdo);
@@ -32,10 +26,11 @@ switch ($parts[3]) {
 
 
   break;
-  case '/films/index.php/films_page.php?page=2':
+  case 'films':
+
   include_once('db_config.php');
-  include_once('./modele/films.php');
-  getmovie($pdo);
+  include_once('./modele/movies.php');
+  detailsMovie($parts, $pdo);
   break;
   case '/films/index.php/films_page.php?page=3':
   include_once('db_config.php');
@@ -69,6 +64,7 @@ switch ($parts[3]) {
   break;
   default:
   echo "reste sur le front :p";
+  break;
 }
 
 ?>
