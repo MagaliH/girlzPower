@@ -2,11 +2,12 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "online";
 $database = "cancoicodemovies";
 
 try {
     $pdo = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    $pdo->exec("SET CHARACTER SET utf8");
     // set the PDO error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // echo "Connected successfully";
