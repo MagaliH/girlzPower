@@ -31,9 +31,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `films` (
   `id_film` int(11) NOT NULL,
   `titre` varchar(43) DEFAULT NULL,
-  `année` varchar(5) DEFAULT NULL,
+  `annee` varchar(5) DEFAULT NULL,
   `description` varchar(883) DEFAULT NULL,
-  `réalisateur` varchar(30) DEFAULT NULL,
+  `realisateur` varchar(30) DEFAULT NULL,
   `genre` varchar(28) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -41,7 +41,7 @@ CREATE TABLE `films` (
 -- Déchargement des données de la table `films`
 --
 
-INSERT INTO `films` (`id_film`, `titre`, `année`, `description`, `réalisateur`, `genre`) VALUES
+INSERT INTO `films` (`id_film`, `titre`, `annee`, `description`, `realisateur`, `genre`) VALUES
 (1, 'Kimi no Na Wa(Your Name)', '2016', 'Mitsuha est une lycéenne qui réside dans une petite ville située dans les montagnes. Elle vit aux côtés de sa petite soeur, sa grand-mère ainsi que son père, bien que ce dernier ne soit jamais à la maison à cause de son travail de maire. En réalité, sa vie ne lui convient pas et souhaite pouvoir vivre à Tokyo. Taki est un lycéen qui habite à Tokyo et qui adore l\'architecture et l\'art. Il vit une vie normale d\'étudiant entouré d\'amis et travaille même dans un petit restaurant italien. Mais un jour, il fait un rêve dans lequel il est dans la peau d\'une jeune fille qui vit dans une ville en montagne. Mitsuha, quant à elle, fait également un rêve dans lequel elle est dans le corps d\'un garçon qui vit a Tokyo. Quel est le secret qui se cache derrière ces étranges rêves qui échangent la vie de ces deux jeunes gens ?', 'Makoto Shinkai', 'Romance'),
 (2, 'The Foreigner', '2017', 'A Londres, un modeste propriétaire de restaurant de Chinatown va tenter de retrouver les terroristes irlandais responsables de la mort de sa fille.', 'Martin Campbell', 'Action'),
 (3, 'Ip Man', '2008', 'Au début des années 1930, la ville de Foshan est prospère et y fleurissent les écoles d\'arts martiaux chinois. Pourtant, le meilleur d\'entre eux, Ip Man, expert en wing chun, préfère cacher ses talents et profiter de ses rentes pour passer du temps en famille et s\'entraîner', 'Wilson Yip', 'Action'),
