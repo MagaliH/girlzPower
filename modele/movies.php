@@ -18,6 +18,7 @@ function getGenres($pdo, $id_film){
 }
 
 
+
 function insertMovie($film){
 
 

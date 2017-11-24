@@ -15,7 +15,7 @@ function getmovie($pdo) {
 
 
   // Puis on fait une boucle pour écrire les liens vers chacune des pages
-  echo 'Page : ';
+
   for ($i = 1 ; $i <= $nb_pages ; $i++)
   {
       echo '<a href="accueil/' . $i . '">' . $i . '</a> ';
