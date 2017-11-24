@@ -15,16 +15,16 @@ function insertMovie($film){
 }
 }
 
-function detailsMovie($chemin, $pdo){
+function detailsMovie($parts, $pdo){
   /* Connexion a la base de données films */
   $bdd = $pdo->query('SELECT * FROM films');
   /*  Mettre en tableau la base de données  */
   foreach ($bdd as $bdd_table) {
     /* Verifier si l'id du films existe */
-    if(isset($chemin[4]))
+    if(isset($parts[4]))
     {
       /* Si l'id correspond a une id valide */
-      if($chemin[4] == $bdd_table[0])
+      if($parts[4] == $bdd_table[0])
       {
         /* Afficher les informations */
         echo $bdd_table[1];

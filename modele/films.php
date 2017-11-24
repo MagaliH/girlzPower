@@ -18,7 +18,7 @@ function getmovie($pdo) {
   echo 'Page : ';
   for ($i = 1 ; $i <= $nb_pages ; $i++)
   {
-      echo '<a href="films_page.php?page=' . $i . '">' . $i . '</a> ';
+      echo '<a href="accueil/' . $i . '">' . $i . '</a> ';
   }
   ?>
   <div align="center">
