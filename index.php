@@ -2,6 +2,8 @@
 $uri = $_SERVER['REQUEST_URI'];
 $parts = explode('/', rtrim($uri, '/'));
 
+
+
 switch ($parts[3]) {
 	case 'accueil':
 
