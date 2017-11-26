@@ -1,10 +1,13 @@
-$('.btn-plus').click(function()){
-  var titre =
-  $.ajax({
-    type: "GET";
-    url: "films.php",
-    dataType: "json",
-    data: titre
-    success: function() 
-  })
-}
+$(document).ready(function() {
+   $('select').material_select();
+ });
+
+$('.chips-initial').material_chip({
+  data: [{
+    tag: 'Romance',
+  }, {
+    tag: 'Aventure',
+  }, {
+    tag: 'Science Fiction',
+  }],
+});
