@@ -3,6 +3,7 @@ $(document).ready(function() {
  });
 
 $('.chips').material_chip();
+
 $('.chips-initial').material_chip({
   data: [{
     tag: 'Romance',
@@ -12,6 +13,7 @@ $('.chips-initial').material_chip({
     tag: 'Science Fiction',
   }],
 });
+
 $('.chips-autocomplete').material_chip({
     autocompleteOptions: {
       data: {
