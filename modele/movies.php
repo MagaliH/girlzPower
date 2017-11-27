@@ -20,7 +20,7 @@ if(isset($p) && !empty($p) && ctype_digit($p) == 1){
     $current = 1;
 }
     $firstOfPage = ($current-1)*$perPage;
-    $reqFilms = $pdo->query("SELECT titre, annee FROM films ORDER BY titre ASC LIMIT $firstOfPage, $perPage");
+    $reqFilms = $pdo->query("SELECT titre, annee, id_film FROM films ORDER BY titre ASC LIMIT $firstOfPage, $perPage");
     $films = $reqFilms->fetchAll();
     return $films;
 }
@@ -39,24 +39,12 @@ function getGenres($pdo, $id_film){
 //
 // }
 
-function detailsMovie($parts, $pdo){
-  /* Connexion a la base de données films */
-  $bdd = $pdo->query('SELECT * FROM films');
-  /*  Mettre en tableau la base de données  */
-  foreach ($bdd as $bdd_table) {
-    /* Verifier si l'id du films existe */
-    if(isset($parts[4]))
-    {
-      /* Si l'id correspond a une id valide */
-      if($parts[4] == $bdd_table[0])
-      {
-        /* Afficher les informations */
-        echo $bdd_table[1];
-        echo $bdd_table[2];
-        echo $bdd_table[3];
-      }
-    }
-  }
+function detailsMovie($pdo, $id_film){
+
+  $bdd = $pdo->query("SELECT * FROM films WHERE id_film = $id_film");
+  $detailsFilms = $bdd->fetchAll();
+  return $detailsFilms;
+
 }
 
 
