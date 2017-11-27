@@ -21,7 +21,7 @@ switch ($parts[3]) {
 		include_once('db_config.php');
 		include_once('./modele/movies.php');
 		include_once('./view/header.html');
-		getmovie($pdo, $p);
+		include_once('./view/films.php');
     getGenres($pdo, 4);
 		include_once('./view/pagination.php');
 		include_once('./view/footer.html');
@@ -32,7 +32,7 @@ switch ($parts[3]) {
     	include_once('db_config.php');
     	include_once('./modele/movies.php');
 			include_once('./view/header.html');
-			include_once('./view/pagination.php');
+			include_once('./view/details.html');
     	detailsMovie($parts, $pdo);
      	getGenres($pdo, 4);
 			include_once('./view/footer.html');

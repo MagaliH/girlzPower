@@ -1,16 +1,16 @@
 <div class="container-fluid">
   <div class="container">
     <div class="row">
-    <form class="col s12" method="post" action="../modele/movies.php">
+    <form class="col s12" method="post" action="../modele/form.php">
 
       <!-- titre realisateur -->
       <div class="row">
         <div class="input-field col s6">
-          <input  id="titre" type="text" class="validate">
+          <input  id="titre" type="text" class="validate" name="titre">
           <label for="titre">Titre :</label>
         </div>
         <div class="input-field col s6">
-          <input  id="realisateur" type="text" class="validate">
+          <input  id="realisateur" type="text" class="validate" name="real">
           <label for="realisateur">Réalisateur :</label>
         </div>
       </div>
@@ -18,7 +18,7 @@
       <!-- description textarea -->
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="description" class="materialize-textarea"></textarea>
+          <textarea id="description" class="materialize-textarea" name="des"></textarea>
           <label for="description">Description :</label>
         </div>
       </div>
