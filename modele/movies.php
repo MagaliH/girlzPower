@@ -1,21 +1,21 @@
 <?php
 function getmovie($pdo, $p){
-$perPage = 5;
-$req = $pdo->query("SELECT COUNT(*) AS total FROM films");
-$result =$req->fetch();
-$total = $result['total'];
 
-$nbPage = ceil($total/$perPage);
+  $perPage = 5;
+  $req = $pdo->query("SELECT COUNT(*) AS total FROM films");
+  $result =$req->fetch();
+  $total = $result['total'];
+  $nbPage = ceil($total/$perPage);
 
 if(isset($p) && !empty($p) && ctype_digit($p) == 1){
     if($p >$nbPage){
 
         $current = $nbPage;
 
-    }else{
+    }else
         $current =$p;
-    }
 }else{
+
     $current = 1;
 }
     $firstOfPage = ($current-1)*$perPage;
@@ -29,12 +29,13 @@ if(isset($p) && !empty($p) && ctype_digit($p) == 1){
 function getGenres($pdo, $id_film){
   $genre = $pdo->query("SELECT genre.nom FROM l_film_genre INNER JOIN genre ON l_film_genre.id_genre = genre.id_genre WHERE l_film_genre.id_film=$id_film");
   $genres = $genre->fetchAll();
-  print_r($genres);
+  print_r($genres[0]);
   }
 
 
 
 function insertMovie($film){
+  
 
 }
 

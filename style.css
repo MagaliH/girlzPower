@@ -1,0 +1,30 @@
+.page{
+  padding-top: 20px;
+  color: #000;
+  background-color: #e1bee7;
+}
+
+.nav, .footer-copyright{
+  background-color: #ce93d8 ;
+}
+
+textarea.materialize-textarea:focus:not([readonly]), input[type="text"]:focus:not(.browser-default):not([readonly]){
+  border-bottom: 1px solid #ce93d8;
+  box-shadow: 0 1px 0 0 #ce93d8;
+}
+
+textarea.materialize-textarea:focus:not([readonly]) + label , input[type="text"]:focus:not(.browser-default):not([readonly]) + label{
+  color: #ce93d8;
+}
+
+form{
+  padding-top: 30px;
+}
+
+.btn{
+  background-color: #ce93d8;
+}
+
+.btn:hover{
+  background-color:#ba68c8;
+}
