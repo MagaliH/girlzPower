@@ -20,30 +20,18 @@ switch ($parts[3]) {
 
 		include_once('db_config.php');
 		include_once('./modele/movies.php');
-		include_once('./view/header.html');
 		getmovie($pdo, $p);
-    getGenres($pdo, 4);
-		include_once('./view/pagination.html');
-		include_once('./view/footer.html');
+    	getGenres($pdo, 4);
 		break;
 
 	case 'films':
 
     	include_once('db_config.php');
     	include_once('./modele/movies.php');
-			include_once('./view/header.html');
-			include_once('./view/pagination.html');
+
     	detailsMovie($parts, $pdo);
      	getGenres($pdo, 4);
-			include_once('./view/footer.html');
      	break;
-
-	case 'formulaire':
-		include_once('./view/header.html');
-		include_once('db_config.php');
-		include_once('./view/formulaire.php');
-		include_once('./view/footer.html');
-		break;
 
 	default:
 		echo "Grosse erreur, veuillez entrer un chiffre entre 1 et 8";

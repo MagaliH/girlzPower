@@ -24,9 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $isSuccess = "false";
       }
 
-      if(isSuccess){
 
-      }
 }
 
 function verifyInput($var){
@@ -85,8 +83,6 @@ function verifyInput($var){
     <div class="row">
       <button class="waves-effect" type="submit" name="button">Envoyer</button>
     </div>
-
-    <p style="display:<?php if($isSuccess) echo 'block';else echo 'none'; ?>">Votre film à bien était ajouté !</p>
 </form>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
