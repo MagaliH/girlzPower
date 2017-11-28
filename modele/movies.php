@@ -1,5 +1,12 @@
 <?php
 
+function AllGenre($pdo){
+  $genres = $pdo->query("SELECT nom FROM genre ");
+  $genre = $genres->fetchAll();
+  return $genre;
+}
+
+
 function getmovie($pdo, $p){
 
   $perPage = 5;
