@@ -54,7 +54,7 @@ function insertMovie($pdo){
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
       $array['titre'] = verifyInput($_POST['titre']);
-      //$array['annee'] = verifyInput($_POST['annee']);
+      $array['annee'] = verifyInput($_POST['annee']);
       $array['realisateur'] = verifyInput($_POST['realisateur']);
       //$array['genre'] = verifyInput($_POST['genre']);
       $array['description'] = verifyInput($_POST['description']);
@@ -76,8 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       }
 
       if($array['isSuccess']){
-       $insert = $pdo->query("INSERT INTO films (description, titre, realisateur) VALUES('".$array['description']."','".$array['titre']."','".$array['realisateur']."')");
-       echo "alouette, gentille alouette ";
+       $insert = $pdo->query("INSERT INTO films (titre, description, annee, realisateur) VALUES('".$array['titre']."','".$array['description']."','".$array['annee']."','".$array['realisateur']."')");
       }
       echo json_encode($array);
 }
