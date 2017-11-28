@@ -34,8 +34,48 @@ function getGenres($pdo, $id_film){
 
 
 
-function insertMovie($film){
-  
+function insertMovie($pdo){
+
+
+  function verifyInput($var){
+    $var = trim($var);
+    $var = stripslashes($var);
+    $var = htmlspecialchars($var);
+    return $var;
+  }
+
+  $array = array('titre'=>"",'annee'=>"",'realisateur'=>"",'genre'=>"", 'description'=>"", 'titreError'=>"", 'anneeError'=>"", 'realisateurError'=>"", 'genreError'=>"",'descriptionError'=>"", 'isSuccess'=>"");
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+      $array['titre'] = verifyInput($_POST['titre']);
+      //$array['annee'] = verifyInput($_POST['annee']);
+      $array['realisateur'] = verifyInput($_POST['realisateur']);
+      //$array['genre'] = verifyInput($_POST['genre']);
+      $array['description'] = verifyInput($_POST['description']);
+      $array['isSuccess'] = true;
+
+      if(empty($array['titre'])){
+        $array['titreError'] = "Entrez un titre !";
+        $array['isSuccess'] = false;
+      }
+
+      if(empty($array['realisateur'])){
+        $array['realisateurError'] = "Entrez le nom du réalisateur !";
+        $array['isSuccess'] = false;
+      }
+
+
+      if(empty($array['description'])){
+        $array['descriptionError'] = "Entrez la description du film !";
+        $array['isSuccess'] = false;
+      }
+      if($array['isSuccess']){
+
+       $insert = $pdo->query("INSERT INTO films (description, titre, realisateur) VALUES('".$array['description']."','".$array['titre']."','".$array['realisateur']."')");
+       echo "alouette, gentille alouette ";
+      }
+      echo json_encode($array);
+}
 
 }
 

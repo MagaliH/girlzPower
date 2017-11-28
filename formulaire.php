@@ -1,42 +1,3 @@
-<?php
-  $titre = $annee = $realisateur = $genre = $description = "";
-  $titreError = $realisateurError = $descriptionError = "";
-  $isSuccess = "false";
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-      $titre = verifyInput($_POST['titre']);
-      $realisateur = verifyInput($_POST['realisateur']);
-      $description = verifyInput($_POST['description']);
-      $isSuccess = "true";
-
-      if(empty($titre)){
-        $titreError = "Entrez un titre !";
-        $isSuccess = "false";
-      }
-
-      if(empty($realisateur)){
-        $realisateurError = "Entrez le nom du réalisateur !";
-        $isSuccess = "false";
-      }
-
-      if(empty($description)){
-        $descriptionError = "Entrez la description du film !";
-        $isSuccess = "false";
-      }
-
-
-}
-
-function verifyInput($var){
-  $var = trim($var);
-  $var = stripslashes($var);
-  $var = htmlspecialchars($var);
-  return $var;
-}
-
- ?>
-
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -47,46 +8,46 @@ function verifyInput($var){
   <body>
 
 
-<form class="col s12 m12" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+<form class="col s12 m12" method="post" id="formu">
   <div class="row">
      <div class="input-field col s6">
-       <input id="titre" name="titre" type="text" class="validate" value="<?php echo $titre;  ?>">
+       <input id="titre" name="titre" type="text" class="validate" value="">
        <label for="titre">Titre</label>
-       <p><?php echo $titreError;  ?></p>
+       <p class="er"></p>
      </div>
-   <!-- <div class="input-field col s6">
+   <div class="input-field col s6">
     <select id="annee" name="annee" >
-      <option value="<?php echo $annee; ?>">2017</option>
-      <option value="<?php echo $annee; ?>">2016</option>
-      <option value="<?php echo $annee; ?>">2015</option>
+      <option value="1">2017</option>
+      <option value="2">2016</option>
+      <option value="3">2015</option>
     </select>
     <label>Année</label>
-  </div> -->
+  </div>
 </div>
 <div class="row">
   <div class="input-field col s6">
-    <input id="realisateur" name="realisateur" type="text" class="validate" value="<?php echo $realisateur; ?>">
+    <input id="realisateur" name="realisateur" type="text" class="validate">
     <label for="realisateur">Réalisateur</label>
-    <p><?php echo $realisateurError;  ?></p>
+    <p class="er"></p>
   </div>
   <!-- <div class="col s6">
-    <div class="chips chips-initial" name="genre" id="genre" value="<?php echo $genre; ?>">Genre</div>
+    <div class="chips chips-initial" name="genre" id="genre" value="">Genre</div>
   </div>
   </div> -->
    <div class="row">
        <div class="input-field col s12">
-         <textarea id="description" name="description" class="materialize-textarea"><?php echo $description ; ?></textarea>
+         <textarea id="description" name="description" class="materialize-textarea"></textarea>
          <label for="description">Description</label>
-         <p><?php echo $descriptionError;  ?></p>
+         <p class="er"></p>
        </div>
     </div>
     <div class="row">
-      <button class="waves-effect" type="submit" name="button">Envoyer</button>
+      <button class="waves-effect" type="button" name="button">Envoyer</button>
     </div>
 </form>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="http://localhost/girlzPower/scriptFormulaire.js"></script>
 </body>
 </html>
