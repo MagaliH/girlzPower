@@ -36,6 +36,7 @@ switch ($parts[3]) {
     	include_once('./modele/movies.php');
 			include_once('./view/header.html');
     	$details = detailsMovie($pdo, $parts[4]);
+			$genres = getGenres($pdo, $parts[4]);
 			include_once('./view/details.php');
      	// getGenres($pdo, 4);
 			include_once('./view/footer.html');

@@ -3,9 +3,9 @@
     <?php
     foreach ($movies as $movie) {
     echo "<div class='row'>";
-      echo "<div class='col s12 m6'>";
-         echo "<div class='card blue-grey darken-1'>";
-           echo "<div class='card-content white-text'>";
+      echo "<div class='col s12 m12 l12 xl12'>";
+         echo "<div id='car' class='card'>";
+           echo "<div class='card-content'>";
              echo "<span class='card-title'>". $movie['titre']."</span>";
               echo "<p>".$movie['annee']."</p>";
           echo "</div>";
@@ -15,9 +15,6 @@
          echo "</div>";
        echo "</div>";
      echo "</div>";
-
-
-
 
     }
 

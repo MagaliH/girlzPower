@@ -4,24 +4,35 @@ $(document).ready(function() {
 
 $('.chips').material_chip();
 
-$('.chips-initial').material_chip({
-  data: [{
-    tag: 'Romance',
-  }, {
-    tag: 'Aventure',
-  }, {
-    tag: 'Science Fiction',
-  }],
-});
 
-$('.chips-autocomplete').material_chip({
-    autocompleteOptions: {
-      data: {
-        'Drame': null,
-        'Action': null,
-        'Fantastique': null
-      },
-      limit: Infinity,
-      minLength: 1
-    }
+
+$('.chips-initial').material_chip({
+    data: [{
+      tag: 'Romance',
+    },  {
+      tag: 'Drame',
+    }, {
+      tag: 'Action',
+    }, {
+      tag: 'Comédie musicale',
+    }, {
+      tag: 'Drame musical',
+    }, {
+      tag: 'Comédie',
+    }, {
+      tag: 'Fantastique',
+    }, {
+      tag: 'Aventure',
+    }, {
+      tag: 'Science-fiction',
+    }, {
+      tag: 'Policier',
+    }, {
+      tag: 'Thriller',
+    },
+    {
+      tag: 'Fantasy',
+    }, {
+      tag: 'Road-trip',
+    }],
   });

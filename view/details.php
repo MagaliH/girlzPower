@@ -15,6 +15,15 @@
 
 
   }
+  echo "<p> Genre : ";
+  foreach ($genres as $genre){
+
+      echo $genre[0]." ";
+  }
+
+  echo "</p>";
+
+
 
   ?>
   </div>

@@ -38,7 +38,7 @@
 
       <!-- Genre tag -->
       <div class="row">
-        <div class="chips chips-autocomplete">Genre :</div>
+        <div class="chips chips-initial"></div>
       </div>
         <!-- bouton envoi -->
       <div class="row">
