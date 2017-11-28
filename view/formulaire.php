@@ -26,7 +26,7 @@
       <!-- année select -->
       <div class="row">
         <div class="input-field col s12">
-          <select>
+          <select name="annee">
             <?php
             for ($i = 1900; $i <= 2017; $i++){
             echo '<option value="' . $i . '">' . $i . '</option>';}
@@ -38,7 +38,14 @@
 
       <!-- Genre tag -->
       <div class="row">
-        <div class="chips chips-initial"></div>
+        <select multiple name="genre">
+          <?php
+            for(){
+              echo "<option value=''></option>";
+            }
+           ?>
+        </select>
+        <label>Genre :</label>
       </div>
         <!-- bouton envoi -->
       <div class="row">
