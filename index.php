@@ -45,6 +45,8 @@ switch ($parts[3]) {
 	case 'formulaire':
 		include_once('./view/header.html');
 		include_once('db_config.php');
+		include_once('./modele/movies.php');
+		$genre = AllGenre($pdo);
 		include_once('./view/formulaire.php');
 		include_once('./view/footer.html');
 		break;

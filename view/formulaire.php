@@ -38,10 +38,10 @@
 
       <!-- Genre tag -->
       <div class="row">
-        <select multiple name="genre">
+        <select multiple name="genre[]">
           <?php
-            for(){
-              echo "<option value=''></option>";
+            for($i = 0; $i < 13; $i++){
+              echo "<option value='".$genre[$i][0]."'>".$genre[$i][0]."</option>";
             }
            ?>
         </select>
