@@ -10,7 +10,6 @@ $(function(){
         data: postdata,
         dataType: 'json',
         success: function(result){
-          console.log("success");
           if(result.isSuccess){
             $("#formu").append("<p>Votre film a bien été ajouté !</p>");
             $("#formu")[0].reset();
@@ -23,7 +22,7 @@ $(function(){
           }
         },
         error: function(data){
-          console.log(data);
+          console.log("error");
         }
 
       });

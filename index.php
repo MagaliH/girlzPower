@@ -18,26 +18,27 @@ switch ($parts[3]) {
 	}else
 	$p = 0;
 
-	include_once('db_config.php');
-	include_once('./modele/movies.php');
-	include_once('./view/header.html');
-	getmovie($pdo, $p);
-	getGenres($pdo, 4);
-
-	include_once('./view/pagination.php');
-	include_once('./view/footer.html');
-	break;
+		include_once('db_config.php');
+		include_once('./modele/movies.php');
+		include_once('./view/header.html');
+ 		$movies = getmovie($pdo, $p);
+		include_once('./view/films.php');
+    getGenres($pdo, 4);
+		include_once('./view/pagination.php');
+		include_once('./view/footer.html');
+		break;
 
 	case 'films':
 
-	include_once('db_config.php');
-	include_once('./modele/movies.php');
-	include_once('./view/header.html');
-	detailsMovie($parts, $pdo);
-	getGenres($pdo, 4);
-	include_once('./view/pagination.php');
-	include_once('./view/footer.html');
-	break;
+    	include_once('db_config.php');
+    	include_once('./modele/movies.php');
+			include_once('./view/header.html');
+    	$details = detailsMovie($pdo, $parts[4]);
+			$genres = getGenres($pdo, $parts[4]);
+			include_once('./view/details.php');
+     	// getGenres($pdo, 4);
+			include_once('./view/footer.html');
+     	break;
 
 	case 'formulaire':
 		include_once('./view/header.html');
@@ -45,11 +46,12 @@ switch ($parts[3]) {
 		include_once('./view/formulaire.php');
 		include_once('./view/footer.html');
 		break;
-		
-		case 'ajout':
+
+	case 'ajout':
 		include_once('db_config.php');
 		include_once('./modele/movies.php');
 		insertMovie($pdo);
+
 		break;
 
 

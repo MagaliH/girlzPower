@@ -42,7 +42,7 @@
        </div>
     </div>
     <div class="row">
-      <button class="waves-effect" type="button" name="button">Envoyer</button>
+      <button id="btn" class="waves-effect" type="button" name="button">Envoyer</button>
     </div>
 </form>
 
