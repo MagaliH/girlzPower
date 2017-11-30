@@ -1,6 +1,9 @@
 <div class="container-fluid">
   <div class="container">
     <div class="row">
+      <p>Veuillez remplir tous les champs de ce formulaire pour ajouter votre film à notre site web.</p>
+    </div>
+    <div class="row">
     <form id="formu" class="col s12" method="post">
 
       <!-- titre realisateur -->

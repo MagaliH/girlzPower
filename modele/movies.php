@@ -40,15 +40,16 @@ function getGenres($pdo, $id_film){
   return $genres;
   }
 
-
-function insertMovie($pdo){
-
   function verifyInput($var){
     $var = trim($var);
     $var = stripslashes($var);
     $var = htmlspecialchars($var);
     return $var;
   }
+
+function insertMovie($pdo){
+
+
 
   $array = array('titre'=>"",'annee'=>"",'realisateur'=>"",'genre'=>"", 'description'=>"", 'titreError'=>"", 'anneeError'=>"", 'realisateurError'=>"", 'genreError'=>"",'descriptionError'=>"", 'isSuccess'=>"");
 
@@ -87,6 +88,36 @@ function detailsMovie($pdo, $id_film){
   $bdd = $pdo->query("SELECT * FROM films WHERE id_film = $id_film");
   $detailsFilms = $bdd->fetchAll();
   return $detailsFilms;
+}
+
+function infoUser($pdo, $tabUser){
+  $insertUser = $pdo->query("INSERT INTO users (nom, prenom, age, mdp, pseudo) VALUES ('".$tabUser['nom']."','".$tabUser['prenom']."','".$tabUser['age']."','".$tabUser['mdp']."','".$tabUser['pseudo']."')");
+}
+
+function getInfoUser(){
+  if(isset($_POST['nom'])){
+    $nom = verifyInput($_POST['nom']);
+  }
+
+  if(isset($_POST['prenom'])){
+      $prenom = verifyInput($_POST['prenom']);
+  }
+
+  if(isset($_POST['age'])){
+      $prenom = verifyInput($_POST['age']);
+  }
+
+  if(isset($_POST['mdp'])){
+      $prenom = verifyInput($_POST['mdp']);
+  }
+
+  if(isset($_POST['pseudo'])){
+      $prenom = verifyInput($_POST['pseudo']);
+  }
+
+  $tabUser = array('nom' => $nom, 'prenom' => $prenom, 'age' => $age, 'mdp' => $mdp, 'pseudo' => $pseudo);
+  print_r($tabUser);
+
 }
 
 ?>

@@ -1,10 +1,69 @@
-
-h1{
-  margin-top: 0px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+@font-face {
+  font-family: 'ralewayR';
+  src: url('http://localhost/girlzPower/view/fonts/Raleway-Regular.ttf');
 }
 
+/*Generalite*/
+html{
+  font-family: 'ralewayR';
+}
+
+.footerColle{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 2px rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+nav, footer{
+  background-color: rgb(106, 6, 22);
+}
+
+.btn:hover, .btn:focus{
+  background-color: rgba(106, 6, 22, 0.9);
+}
+
+.btn{
+  width: 50%;
+  padding-top: 9px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: rgb(106, 6, 22);
+}
+
+/*Se connecter*/
+.modal{
+  height: 70% !important;
+  width: 70% !important;
+  overflow-y: hidden !important ;
+  border-radius: 10px;
+  background-color: inherit;
+  background-image: url('http://localhost/girlzPower/view/img/ticket1.svg');
+  background-size: 100%;
+  box-shadow: none;
+}
+
+.modal .modal-footer{
+  background-color: inherit;
+}
+
+.modal.modal-fixed-footer .modal-footer{
+  border: none;
+}
+
+.modal .modal-footer .btn-flat{
+  margin-right: 65px;
+}
+
+.co{
+  background-color: inherit;
+  color: rgb(106, 6, 22);
+  border: 2px solid rgb(106, 6, 22);
+  box-shadow: none;
+}
+
+.co:hover{
+  color: white;
+}
+
+/*Header*/
 header{
   margin-top: 0px;
   background-image: url('../img/siege.png');
@@ -13,27 +72,22 @@ header{
   height: 250px; ;
 }
 
-nav, footer{
-  background-color: rgb(106, 6, 22);
+.brand-logo {
+  margin-top: 10px;
 }
 
-footer{
-    margin-top: 60px;
-    padding-top: 40px;
-}
-#car{
-  color:  rgb(106, 6, 22);
+.connex{
+  color: rgb(106, 6, 22);
+  padding-bottom: 100px;
 }
 
+/*Contenu*/
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
   font-weight: bold;
-  color: rgb(107, 106, 106);}
-
-.fo{
-  margin: 0px;
-
+  color: rgb(107, 106, 106);
 }
 
+/*formulaire*/
 
 textarea.materialize-textarea:focus:not([readonly]), input[type="text"]:focus:not(.browser-default):not([readonly]){
   border-bottom: 1px solid rgb(106, 6, 22);
@@ -44,14 +98,25 @@ textarea.materialize-textarea:focus:not([readonly]) + label , input[type="text"]
   color: rgb(106, 6, 22);
 }
 
-.chips .chip.selected, .btn{
+.chips .chip.selected{
   background-color: rgb(106, 6, 22);
 }
 
-.btn:hover, .btn:focus{
-  background-color: rgba(106, 6, 22, 0.9);
+/*Footer*/
+footer{
+    margin-top: 10px;
+    padding: 30px;
+}
+#car{
+  color:  rgb(106, 6, 22);
 }
 
+.fo{
+  margin: 0px;
+
+}
+
+/*Media Queries*/
 @media only screen and (max-width: 992px) {
   html{
     font-size: 20px;
