@@ -18,8 +18,10 @@ switch ($parts[3]) {
 		include_once('./modele/movies.php');
 		include_once('./view/nav.php');
 		include_once('./view/header.html');
+		$nbPages = getmovie($pdo, $p)[1];
+		$current = getmovie($pdo, $p)[2];
 		include('./view/pagination.php');
- 		$movies = getmovie($pdo, $p);
+ 		$movies = getmovie($pdo, $p)[0];
 		include_once('./view/films.php');
     getGenres($pdo, 4);
 		include('./view/pagination.php');
@@ -70,8 +72,21 @@ switch ($parts[3]) {
 		include_once('./view/footer.php');
 		break;
 
-		default:
-			echo "Vive le front !";
+	case 'ajoutUser':
+		include_once('db_config.php');
+		include_once('./modele/users.php');
+		$tabUser = getInfoUser();
+		(in_array(false, $tabUser)? $verif = 1 : $verif =0);
+		if($verif != 1){
+
+			insertUser($pdo, $tabUser);
+
+		}
+		echo json_encode($tabUser);
+		break;
+
+	default:
+		echo "Vive le front !";
 	}
 
 	?>

@@ -53,7 +53,7 @@
         <!-- bouton envoi -->
       <div class="row">
         <div class="center-align">
-          <button class="btn waves-effect waves-light col s12 m6 l3 xl3" type="button" name="action">Soumettre
+          <button id="formFilm" class="btn waves-effect waves-light col s12 m6 l3 xl3" type="button" name="action">Soumettre
             <i class="material-icons right">send</i>
           </button>
         </div>

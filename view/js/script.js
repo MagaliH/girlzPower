@@ -42,77 +42,80 @@ $('.chips-initial').material_chip({
   });
 
 // Formulaire ajout film
-  $(document).ready(function() {
-    $(function(){
-        $('#formu').click(function(e){
-          e.preventDefault(); //enlève comportement par defaut lors envoie formulaire
-          $('.er').empty(); //remet a zero les message d'erreur
-          var postdata = $('#formu').serialize(); //recupere donnée formulaire et les stocks dans une variable
+$(document).ready(function() {
+  $(function(){
+      $('#formFilm').click(function(e){
+        e.preventDefault(); //enlève comportement par defaut lors envoie formulaire
+        $('.er').empty(); //remet a zero les message d'erreur
+        var postdata = $('#formu').serialize(); //recupere donnée formulaire et les stocks dans une variable
 
-          $.ajax({
-            type: 'post',
-            url: 'http://localhost/girlzPower/index.php/ajout',
-            data: postdata,
-            dataType: 'json',
-            success: function(result){
-              if(result.isSuccess){
-                $("#remplir").html("");
-                $("#formu").html("");
-                $("#formu").append("<div class='center-align'><img src='http://localhost/girlzPower/view/img/popcorn.svg'><h3 class='ajout'>Merci ! Votre film a bien été ajouté !</h3></div>");
-                $("#formu")[0].reset();
-              }else{
-                $("#titre + .er").html(result.titreError);
-                $("#annee + .er").html(result.anneeError);
-                $("#genre + .er").html(result.genreError);
-                $("#realisateur + .er").html(result.realisateurError);
-                $("#description + .er").html(result.descriptionError);
-              }
-            },
-            error: function(data){
-              console.log("error");
+        $.ajax({
+          type: 'post',
+          url: 'http://localhost/girlzPower/index.php/ajout',
+          data: postdata,
+          dataType: 'json',
+          success: function(result){
+            if(result.isSuccess){
+              $("#remplir").html("");
+              $("#formu").html("");
+              $("#formu").append("<div class='center-align'><img src='http://localhost/girlzPower/view/img/popcorn.svg'><h3 class='ajout'>Merci ! Votre film a bien été ajouté !</h3></div>");
+              $("#formu")[0].reset();
+            }else{
+              $("#titre + .er").html(result.titreError);
+              $("#annee + .er").html(result.anneeError);
+              $("#genre + .er").html(result.genreError);
+              $("#realisateur + .er").html(result.realisateurError);
+              $("#description + .er").html(result.descriptionError);
             }
-
-          });
+          },
+          error: function(data){
+            console.log("error");
+          }
 
         });
-    })
-   });
 
-// Formulaire ajoute utilisateur
-   $(document).ready(function() {
-     $(function(){
-         $('#formUser').click(function(e){
-           e.preventDefault(); //enlève comportement par defaut lors envoie formulaire
-           var postdata = $('#formUser').serialize(); //recupere donnée formulaire et les stocks dans une variable
+      });
+  })
+ });
 
-           $.ajax({
-             type: 'post',
-             url: 'http://localhost/girlzPower/index.php/ajoutUser',
-             data: postdata,
-             dataType: 'json',
-             success: function(result){
-               console.log("succès");
-               console.log(result.mdp);
-               console.log(result.mdpconf);
-               if(result.mdp != result.mdpconf){
-                 console.log("mdperreur");
-                 $('#pass').html("<p>Erreur mot de passe</p>");
 
-               }
-               else{
-                 console.log('success');
-                 $('#formUser').html("");
-                 $('#signup').html("");
-                 $('#formUser').html("<h3 class='ajout'>Bienvenue " + result['pseudo']+" ! </h3>");
-               }
-             },
-             error: function(data){
-               console.log("error");
+ $(document).ready(function() {
+   $(function(){
+       $('#submitUser').click(function(e){
+         e.preventDefault(); //enlève comportement par defaut lors envoie formulaire
+         var postdata = $('#formUser').serialize(); //recupere donnée formulaire et les stocks dans une variable
+
+         $.ajax({
+           type: 'post',
+           url: 'http://localhost/girlzPower/index.php/ajoutUser',
+           data: postdata,
+           dataType: 'json',
+           success: function(result){
+             console.log("succès");
+             console.log(result.mdp);
+             console.log(result.mdpconf);
+             if(result.mdp != result.mdpconf){
+               console.log("mdperreur");
+               $('#pass').html("<p>Erreur mot de passe</p>");
+
              }
-           });
+             else{
+               console.log('success');
+               $('#formUser').html("");
+               $('#signup').html("");
+               $('#formUser').html("<h3 class='ajout'>Bienvenue " + result['pseudo']+" ! </h3>");
+             }
+           },
+           error: function(data){
+             console.log("error");
+           }
+
          });
-     })
-    });
+
+       });
+   })
+  });
+
 
 // Au click sur Connexion
   $(function(){

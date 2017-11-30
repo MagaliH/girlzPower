@@ -10,7 +10,7 @@
               echo "<p>".$movie['annee']."</p>";
           echo "</div>";
            echo "<div class='card-action'>";
-             echo "<a href='http://localhost/girlzPower/index.php/films/".$movie['id_film']."'>Détails</a>";
+             echo "<a href='http://localhost/GirlzPower/index.php/films/".$movie['id_film']."'>Détails</a>";
            echo "</div>";
          echo "</div>";
        echo "</div>";

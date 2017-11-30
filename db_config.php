@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "online";
 $database = "cancoicodemovies";
 $utf = "utf-8";
 
