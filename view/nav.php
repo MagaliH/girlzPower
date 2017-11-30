@@ -21,9 +21,14 @@
               <div id="modal1" class="modal modal-fixed-footer">
                 <div class="modal-content">
                   <h4 class="connex center-align">Se connecter</h4>
-                <p class="center-align"> <a class="waves-effect waves-light btn co">Connexion</a></p>
-                 <p class="center-align"><a class="waves-effect waves-light btn co">Créer un compte</a></p>
+                <p class="center-align"> <a id="log" class="waves-effect waves-light btn co">Connexion</a></p>
+                 <p class="center-align hide-on-small-only"><a id="new" class="waves-effect waves-light btn co">Créer un compte</a></p>
+                 <p class="center-align show-on-small"><a id="new" class="waves-effect waves-light btn co">Compte</a></p>
                 </div>
+
+                <div id="formLogin">
+                </div>
+
                 <div class="modal-footer">
                   <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Retour</a>
                 </div>

@@ -3,6 +3,11 @@
   src: url('http://localhost/girlzPower/view/fonts/Raleway-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'ralewaySB';
+  src: url('http://localhost/girlzPower/view/fonts/Raleway-SemiBold.ttf');
+}
+
 /*Generalite*/
 html{
   font-family: 'ralewayR';
@@ -122,22 +127,40 @@ footer{
     font-size: 20px;
   }
 
-  h1{
-    font-size: 50px;
-    padding-bottom: 10px;
-    text-align: center;
-  }
-
-  header{
-    height: 160px;
-  }
-
   .pagination li a{
-    padding: 0 8px;
+    padding: 0 5px;
   }
 
-  nav .brand-logo{
-    font-size: 1.3rem;
-    left: 20%;
+  .modal{
+    background-image: url('http://localhost/girlzPower/view/img/ticket2.svg');
+    height: 66.5% !important;
+  }
+
+  .connex{
+    font-size: 1em;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .co{
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .connex{
+    padding-bottom: 100px;
+  }
+
+  .footerColle{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .connex{
+    padding-bottom: 50px;
   }
 }
