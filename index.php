@@ -85,6 +85,19 @@ switch ($parts[3]) {
 		echo json_encode($tabUser);
 		break;
 
+	case 'monCompte':
+		include_once('./view/navcompte.html');
+		// include_once('./view/header.html');
+		include_once('./view/compte.html');
+		// include_once('./view/footer.php');
+		break;
+
+	case 'infoPerso':
+	 	include_once('./view/navcompte.html');
+		include_once('./view/compte.html');
+		include_once('./view/infoPerso.html');
+		break;
+
 	default:
 		echo "Vive le front !";
 	}

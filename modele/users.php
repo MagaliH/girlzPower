@@ -44,6 +44,7 @@ function getInfoUser(){
     if($_POST['mdp'] == $_POST['mdpconf']){
 
         $tabUser['mdp'] = $_POST['mdp'];
+        $tabUser['mdpconf'] = $_POST['mdpconf'];
 
     }else{
       $tabUser['mdp'] = false;

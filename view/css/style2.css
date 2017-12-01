@@ -1,0 +1,28 @@
+<form class='ne'>
+  <div class='row'>
+    <div class='input-field col s12 m12 l6 xl6'>
+      <input placeholder='Nom' name='nom' id='input_text' type='text'>
+    </div>
+    <div class='input-field col s12 m12 l6 xl6'>
+      <input placeholder='Prenom' name='prenom' id='input_text' type='text'>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='input-field col s12 m12 l6 xl6'>
+      <input placeholder='Pseudo' name='pseudo' id='input_text' type='text'>
+    </div>
+    <div class='input-field col s12 m12 l6 xl6'>
+       <input placeholder='Age' name='age' id='input_text' type='text'>
+     </div>
+   </div>
+   <div class='row'>
+     <div class='input-field col s12 m12 l6 xl6'>
+     <input placeholder='Mot de passe' id='password' type='password' name='mdp'>
+   </div>
+   <div class='input-field col s12 m12 l6 xl6'>
+     <input placeholder='Confirmer Mot de passe' id='password' type='password' name='mdpconf'>
+   </div>
+     <div class='center-align col s12 m12 l12 xl12'><a class='valign-wrapper waves-effect waves-light btn'>Envoyer</a>
+     </div>
+   </div>
+ </form>

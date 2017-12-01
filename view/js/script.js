@@ -4,6 +4,8 @@ $(document).ready(function(){
   $('#modal1').modal();
 });
 
+// barre navigation quand connecter
+$(".dropdown-button").dropdown();
 // Formulaire Ajout
 $(document).ready(function() {
    $('select').material_select();
@@ -81,7 +83,8 @@ $(document).ready(function() {
 
  $(document).ready(function() {
    $(function(){
-       $('#submitUser').click(function(e){
+       $('#modal1').on('click','#submitUser', function(e){
+         console.log('toto');
          e.preventDefault(); //enlève comportement par defaut lors envoie formulaire
          var postdata = $('#formUser').serialize(); //recupere donnée formulaire et les stocks dans une variable
 
@@ -96,14 +99,14 @@ $(document).ready(function() {
              console.log(result.mdpconf);
              if(result.mdp != result.mdpconf){
                console.log("mdperreur");
-               $('#pass').html("<p>Erreur mot de passe</p>");
+               $('#pass').html("Erreur mot de passe");
 
              }
              else{
                console.log('success');
-               $('#formUser').html("");
-               $('#signup').html("");
-               $('#formUser').html("<h3 class='ajout'>Bienvenue " + result['pseudo']+" ! </h3>");
+               $('.modal-content').html("");
+               $('.modal-content').html("<h3 class='ajout'>Bienvenue " + result['pseudo']+" ! </h3>");
+               $('.modal-content').html("<a href='http://localhost/GirlzPower/index.php/accueil'>Retour à l'accueil</a>");
              }
            },
            error: function(data){
@@ -121,10 +124,20 @@ $(document).ready(function() {
   $(function(){
     $('#log').click(function(){
       $('.modal-content').html("");
-      $('.modal-content').append("<div class='container row'><div class='col s12 m12 l7 xl7'>");
+      $('.modal-content').append("<div class='container row center-align'>");
       $('.modal-content').append("<h4 class='center-align'>Se connecter</h4>");
-      $('.modal-content').append("<form><div class='row'><div class='input-field col s12 m12 l12 xl12'><i class='material-icons prefix'>account_circle</i><input id='input_text' type='text' data-length='10'><label for='input_text'>Pseudo</label></div></div><div class='row'><div class='input-field col s12 m12 l12 xl12'><i class='material-icons prefix'>lock</i><input id='password' type='password' data-length='10'><label for='password'>Mot de passe</label></div></div><div class='row'><div class='center-align col s12 m12 l12 xl12'><a class='valign-wrapper waves-effect waves-light btn'>button</a></div></div></form>");
-      $('.modal-content').append("</div></div>");
+      $('.modal-content').append("<form class='lo'><div class='row'><div class='input-field col s12 m12 l12 xl12'><i class='material-icons prefix'>account_circle</i><input placeholder='Pseudo' id='input_text' type='text' data-length='10'></div></div><div class='row'><div class='input-field col s12 m12 l12 xl12'><i class='material-icons prefix'>lock</i><input placeholder='Mot de passe' id='password' type='password' data-length='10'></div></div><div class='row'><div class='center-align col s12 m12 l12 xl12'><a class='valign-wrapper waves-effect waves-light btn'>Envoyer</a></div></div></form>");
+      $('.modal-content').append("</div>");
+    })
+    })
 
-    })
-    })
+// Au click sur créer Compte
+$(function(){
+  $('#new').click(function(){
+    $('.modal-content').html("");
+    $('.modal-content').append("<div class='container row center-align'>");
+    $('.modal-content').append("<h4 class='center-align'>Inscription</h4>");
+    $('.modal-content').append("<form id='formUser' method='post'class='ne'><div class='row'><div class='input-field col s12 m12 l6 xl6'><input placeholder='Nom' name='nom' type='text'></div><div class='input-field col s12 m12 l6 xl6'><input placeholder='Prenom' name='prenom'  type='text'></div></div><div class='row'><div class='input-field col s12 m12 l6 xl6'><input placeholder='Pseudo' name='pseudo' type='text'></div><div class='input-field col s12 m12 l6 xl6'><input placeholder='Age' name='age' type='text'></div></div><div class='row'><div class='input-field col s12 m12 l6 xl6'><input placeholder='Mot de passe' type='password' name='mdp'><p id='pass'></p></div><div class='input-field col s12 m12 l6 xl6'><input placeholder='Confirmer Mot de passe' type='password' name='mdpconf'></div><div class='center-align col s12 m12 l12 xl12'><button id='submitUser' class='waves-effect waves-light btn' type='submit' name='button'>Envoyer</button></div></div></form>");
+    $('.modal-content').append("</div>");
+  })
+  })
