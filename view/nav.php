@@ -12,7 +12,7 @@
 <body>
   <nav class="nav container-fluid">
       <div class="nav-wrapper container">
-          <a href="/girlzPower/index.php/accueil" class="brand-logo left"><img src="http://localhost/GirlzPower/view/img/logo.svg" alt="logo"></a>
+          <a href="/GirlzPower/index.php/accueil" class="brand-logo left"><img src="http://localhost/GirlzPower/view/img/logo.svg" alt="logo"></a>
           <ul id="nav-mobile" class="right">
             <!-- Modal Trigger -->
             <li>  <a class=" modal-trigger" href="#modal1">Se connecter</a>

@@ -31,7 +31,7 @@ if(isset($p) && !empty($p) && ctype_digit($p) == 1){
     $current = 1;
 }
     $firstOfPage = ($current-1)*$perPage;
-    $reqFilms = $pdo->query("SELECT titre, annee, id_film FROM films ORDER BY titre ASC LIMIT $firstOfPage, $perPage");
+    $reqFilms = $pdo->query("SELECT titre, annee, id_film, urlimg FROM films ORDER BY titre ASC LIMIT $firstOfPage, $perPage");
     $films[0] = $reqFilms->fetchAll();
     $films[1] = $nbPage;
     $films[2] = $current;
