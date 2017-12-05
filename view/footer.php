@@ -1,5 +1,5 @@
 
-        <footer <?php if($parts[3] == 'connexion' || $parts[3] == 'newCompte') echo "class='footerColle'"?>>
+        <footer <?php if($parts[3] == 'monCompte') echo "class='footerColle'"?>>
           <div class="footer-copyright  center-align">
             <div class="container white-text">Créé par Lucie, Floriane, Magali</div>
           </div>

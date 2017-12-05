@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="http://localhost/GirlzPower/view/css/style.css">
 </head>
 <body>
-  <nav class="nav container-fluid">
+
+  <nav class="container-fluid" id="nav-accueil">
       <div class="nav-wrapper container">
           <a href="/GirlzPower/index.php/accueil" class="brand-logo left"><img src="http://localhost/GirlzPower/view/img/logo.svg" alt="logo"></a>
           <ul id="nav-mobile" class="right">
             <!-- Modal Trigger -->
-            <li>  <a class=" modal-trigger" href="#modal1">Se connecter</a>
+            <li>  <a class=" modal-trigger hide-on-small-only" href="#modal1">Se connecter</a>
+            <li>  <a class=" modal-trigger hide-on-med-and-up" href="#modal1"><i class="material-icons right">menu</i></a>
 
               <!-- Modal Structure -->
               <div id="modal1" class="modal modal-fixed-footer">
@@ -23,7 +25,7 @@
                   <h4 class="connex center-align">Se connecter</h4>
                 <p class="center-align"> <a id="log" class="waves-effect waves-light btn co">Connexion</a></p>
                  <p class="center-align hide-on-small-only"><a id="new" class="waves-effect waves-light btn co">Créer un compte</a></p>
-                 <p class="center-align show-on-small"><a id="new" class="waves-effect waves-light btn co">Compte</a></p>
+                 <p class="center-align hide-on-med-and-up"><a id="new" class="waves-effect waves-light btn co">Compte</a></p>
                 </div>
 
                 <div id="formLogin">
