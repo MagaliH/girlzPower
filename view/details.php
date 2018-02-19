@@ -7,7 +7,7 @@
         foreach ($details as $detail) {
 
             if(empty($detail['urlimg'])){
-              echo "<img src='http://localhost/GirlzPower/view/img/affiche2.svg' width='400'>";
+              echo "<img src='http://localhost/girlzPower/view/img/affiche2.svg' width='400'>";
             }else{
               echo "<img src='".$detail['urlimg']."' width='400'>";
             }

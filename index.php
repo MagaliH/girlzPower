@@ -15,6 +15,7 @@ switch ($parts[3]) {
 	$p = 0;
 
 		include_once('db_config.php');
+
 		include_once('./modele/movies.php');
 		include_once('./view/nav.php');
 		include_once('./view/header.html');

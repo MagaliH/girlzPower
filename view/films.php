@@ -9,14 +9,14 @@
              echo "<span class='card-title'>". $movie['titre']."</span>";
               echo "<p>".$movie['annee']."</p>";
               if(empty($movie['urlimg'])){
-                echo "<img src='http://localhost/GirlzPower/view/img/affiche2.svg' width='300'>";
+                echo "<img src='http://localhost/girlzPower/view/img/affiche2.svg' width='300'>";
               }else{
                 echo "<img src='".$movie['urlimg']."' width='300'>";
               }
 
           echo "</div>";
            echo "<div class='card-action'>";
-             echo "<a href='http://localhost/GirlzPower/index.php/films/".$movie['id_film']."'>Détails</a>";
+             echo "<a href='http://localhost/girlzPower/index.php/films/".$movie['id_film']."'>Détails</a>";
            echo "</div>";
          echo "</div>";
        echo "</div>";

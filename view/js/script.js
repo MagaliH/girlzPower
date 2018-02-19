@@ -106,7 +106,7 @@ $(document).ready(function() {
                console.log('success');
                $('.modal-content').html("");
                $('.modal-content').html("<h3 class='ajout'>Bienvenue " + result['pseudo']+" ! </h3>");
-               $('.modal-content').html("<a href='http://localhost/GirlzPower/index.php/accueil'>Retour à l'accueil</a>");
+               $('.modal-content').html("<a href='http://localhost/girlzPower/index.php/accueil'>Retour à l'accueil</a>");
              }
            },
            error: function(data){

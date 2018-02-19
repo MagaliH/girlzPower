@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'ralewayR';
-  src: url('http://localhost/GirlzPower/view/fonts/Raleway-Regular.ttf');
+  src: url('http://localhost/girlzPower/view/fonts/Raleway-Regular.ttf');
 }
 
 @font-face {
   font-family: 'ralewaySB';
-  src: url('http://localhost/GirlzPower/view/fonts/Raleway-SemiBold.ttf');
+  src: url('http://localhost/girlzPower/view/fonts/Raleway-SemiBold.ttf');
 }
 
 /*Generalite*/
@@ -51,7 +51,7 @@ nav, footer{
   overflow-y: hidden !important ;
   border-radius: 10px;
   background-color: inherit;
-  background-image: url('http://localhost/GirlzPower/view/img/ticket1.svg');
+  background-image: url('http://localhost/girlzPower/view/img/ticket1.svg');
   background-size: 100%;
   box-shadow: none;
 }
@@ -200,7 +200,7 @@ footer{
   }
 
   .modal{
-    background-image: url('http://localhost/GirlzPower/view/img/ticket2.svg');
+    background-image: url('http://localhost/girlzPower/view/img/ticket2.svg');
     height: 66.5% !important;
   }
 
